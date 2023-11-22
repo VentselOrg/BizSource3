@@ -5,8 +5,10 @@
 pageextension 55000 CustomerListExt extends "Customer List"
 {
     trigger OnOpenPage();
+    var
+        SayHello: Codeunit "Say Hello";
     begin
-        Message('App published: Hello world');
+        SayHello.SayHello(UserId());
     end;
 }
 
